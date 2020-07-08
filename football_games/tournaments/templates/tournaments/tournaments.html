@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+Tournaments
+{% endblock %}
+
+{% block body %}
+<h1>Tournaments</h1>
+<div class="list-group">
+    {% for tournament in tournaments %}
+    <a href="" class="col-2 card {% cycle '' 'list-group-item-secondary' %}">
+        <img src="{{ tournament.image.url }}" class="card-img-top">
+        <p class="card-title">
+            {{tournament.title}}
+        </p>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
